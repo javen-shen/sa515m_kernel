@@ -1,0 +1,9 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+[filter "lfs"]
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+[remote "origin"]
+	url = ssh://sa415m.public@192.168.23.98:39418/sa415m/le.1.7/manifests
+	fetch = +refs/heads/*:refs/remotes/origin/*
